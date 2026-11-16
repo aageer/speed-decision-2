@@ -1,0 +1,64 @@
+{
+ "checks": [
+  {
+   "id": "C1",
+   "name": "Cuts at 420 km match the midterm table (Python)",
+   "pass": true,
+   "detail": "max error 4.2e-10 km/s"
+  },
+  {
+   "id": "C2",
+   "name": "ISS decay term: pipeline = formula",
+   "pass": true,
+   "detail": "-55.52 m/day (formula -55.52)"
+  },
+  {
+   "id": "C3",
+   "name": "Drag RK4 vs closed form, constant density (Python)",
+   "pass": true,
+   "detail": "relative error 4.1e-16"
+  },
+  {
+   "id": "C5",
+   "name": "SATCAT audit counts reproduce from raw",
+   "pass": true,
+   "detail": "71323 rows; 35808 decayed"
+  },
+  {
+   "id": "B5",
+   "name": "B = 0: no decay (Python)",
+   "pass": true,
+   "detail": "420 km kept"
+  },
+  {
+   "id": "B6",
+   "name": "Start below 150 km refused (Python)",
+   "pass": true,
+   "detail": "ValueError"
+  },
+  {
+   "id": "A1",
+   "name": "Ascent: 100 % burn closes, 99 % impacts (Python)",
+   "pass": true,
+   "detail": "100 %: ellipse; 99 %: impact"
+  },
+  {
+   "id": "P1",
+   "name": "Raw snapshots match their SHA-256",
+   "pass": true,
+   "detail": "GP 7e1937d18962\u2026, SATCAT 742ea7fcaa3b\u2026"
+  },
+  {
+   "id": "P3",
+   "name": "JS ports match the Python reference (ascent, drag)",
+   "pass": true,
+   "detail": "ok: ascent worst position gap 9.1e-13 km; 3 drag runs"
+  },
+  {
+   "id": "P2",
+   "name": "Browser SGP4 matches python-sgp4 (all objects)",
+   "pass": true,
+   "detail": "ok: 50684 samples, worst 0.001 m, skipped 1 (SGP4 error on either side)"
+  }
+ ]
+}

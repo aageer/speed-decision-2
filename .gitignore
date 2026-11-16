@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.DS_Store
+data/raw/gp_active_0000-dev.json.gz
+web/test/sgp4_oracle.json
+.vercel

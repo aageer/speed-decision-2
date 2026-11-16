@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Speed Decision II · What keeps an orbit, and for how long?</title>
+  <meta name="description" content="Ten linked views on a real Earth: how a satellite gets into orbit, what speed decides, and how long the orbit lasts. Real CelesTrak data, two-body, SGP4 and drag models. CPS 5745 Project 2, Akhil Ageer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#side">Skip to the explanation</a>
+  <header class="topbar">
+    <div class="brand">
+      <p class="eyebrow">CPS 5745 · Interactive Information Visualization · Project 2</p>
+      <h1>The <em>Speed</em> Decision <span class="ii">II</span></h1>
+      <p class="sub">What keeps an orbit, and for how long?</p>
+    </div>
+    <div class="who">
+      <span class="meta">Akhil Ageer · Kean University</span>
+      <button type="button" class="btn btn-ghost" id="motion" aria-pressed="false" title="Reduce motion">Reduced motion: off</button>
+    </div>
+  </header>
+
+  <nav class="acts" aria-label="Views">
+    <div class="act"><span class="act-name">I · Context</span>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" data-view="1"><b>1</b>Sky now</button>
+        <button type="button" role="tab" data-view="2"><b>2</b>Speed band</button>
+      </div>
+    </div>
+    <div class="act"><span class="act-name">II · Mechanism</span>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" data-view="3"><b>3</b>Launch to orbit</button>
+        <button type="button" role="tab" data-view="4"><b>4</b>Decision map</button>
+        <button type="button" role="tab" data-view="5"><b>5</b>Energy</button>
+        <button type="button" role="tab" data-view="6"><b>6</b>Shape</button>
+        <button type="button" role="tab" data-view="7"><b>7</b>Clock</button>
+      </div>
+    </div>
+    <div class="act"><span class="act-name">III · Evidence</span>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" data-view="8"><b>8</b>Residual</button>
+        <button type="button" role="tab" data-view="9"><b>9</b>Drag decay</button>
+        <button type="button" role="tab" data-view="10"><b>10</b>Where orbits end</button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="passport" aria-live="polite" aria-label="Model passport"></section>
+
+  <main>
+    <div id="stage">
+      <canvas id="gl" aria-label="3D view of the real Earth, satellites and paths"></canvas>
+      <div id="markers"></div>
+      <div id="chart" role="img"></div>
+      <div id="overlay"><div id="legend"></div><p id="frame-note"></p></div>
+      <div id="lower"></div>
+      <div id="tip" hidden></div>
+      <div id="loading">Loading real data…</div>
+    </div>
+
+    <aside id="side" tabindex="-1">
+      <p class="kicker" id="kicker"></p>
+      <h2 id="q-title"></h2>
+      <p id="q-body"></p>
+      <div class="kpis" id="kpis"></div>
+      <div id="controls"></div>
+      <dl id="inspector" class="kv"></dl>
+      <div id="checks" aria-label="Live checks"></div>
+      <p id="limits" class="note"></p>
+      <details id="about">
+        <summary>Data, models and provenance</summary>
+        <div id="prov"></div>
+      </details>
+    </aside>
+  </main>
+
+  <footer id="dock">
+    <div class="slider" id="slider-a"></div>
+    <div class="slider" id="slider-b"></div>
+    <div class="controls">
+      <button type="button" class="btn btn-primary" id="play">Play</button>
+      <button type="button" class="btn" id="step">Step</button>
+      <button type="button" class="btn" id="reset">Reset</button>
+    </div>
+    <p class="keys"><kbd>1</kbd>–<kbd>0</kbd> views · <kbd>Space</kbd> play · <kbd>←</kbd><kbd>→</kbd> step · <kbd>R</kbd> reset · <kbd>P</kbd> pin · drag the globe, scroll to zoom</p>
+  </footer>
+
+  <script type="importmap">
+  { "imports": { "three": "./vendor/three.module.js", "three/addons/": "./vendor/addons/" } }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+ "gp": {
+  "file": "gp_active_2026-11-16.json.gz",
+  "bytes": 7113051,
+  "sha256": "7e1937d18962897beba5d6e44c3c91470446c48d9bb2618bccd151f462ac9c4c",
+  "records": 16895,
+  "epoch_min": "2026-10-22T01:23:03.723072",
+  "epoch_max": "2026-11-18T18:07:56.018208",
+  "source": "https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=json",
+  "retrieved_utc": "2026-11-16T18:35:09Z",
+  "sha256_uncompressed": "7e1937d18962897beba5d6e44c3c91470446c48d9bb2618bccd151f462ac9c4c"
+ },
+ "satcat": {
+  "file": "satcat_2026-11-15.csv.gz",
+  "bytes": 6798415,
+  "sha256": "742ea7fcaa3b1b12085af887c1589590085c5add66dafec1630803d22835b8ac",
+  "rows": 71323,
+  "decayed": 35808,
+  "types": {
+   "R/B": 6929,
+   "PAY": 28328,
+   "DEB": 35947,
+   "UNK": 119
+  },
+  "source": "https://celestrak.org/pub/satcat.csv",
+  "retrieved_utc": "2026-11-16T16:32:50Z",
+  "last_modified": "Sun, 15 Nov 2026 04:33:44 GMT",
+  "sha256_uncompressed": "742ea7fcaa3b1b12085af887c1589590085c5add66dafec1630803d22835b8ac"
+ },
+ "audit_catalog": {
+  "gp_rows": 16895,
+  "catalog_kept": 16895
+ },
+ "audit_satcat": {
+  "rows": 71323,
+  "decayed_with_perigee": 34372,
+  "decayed_outside_bins": 711,
+  "orbit_with_perigee": 34865,
+  "no_perigee": 1658,
+  "not_earth_centred": 428,
+  "decay_not_after_launch": 150,
+  "orbit_outside_bins": 3357
+ },
+ "regimes": {
+  "leo": 16083,
+  "meo": 187,
+  "heo": 44,
+  "geo": 581
+ },
+ "catalog_types": {
+  "PAY": 16891,
+  "R/B": 4
+ }
+}
